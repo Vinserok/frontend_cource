@@ -1,0 +1,317 @@
+
+/******************************
+Geheral Styles
+******************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #113a52;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 3%;
+  }
+
+  header {
+      background-image: linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/bg.png);
+      height: 85vh;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+  }
+
+  h1 {
+      margin: 0;
+  }
+
+  h2:after {
+      display: block;
+      height: 2px;
+      background-color: #e74c3c;
+      content: "";
+      width: 350px;
+      margin: 0 auto;
+      margin-top: 20px;
+  }
+
+  section {
+    display: inline-block;
+    background-color: #eff3f4;
+    padding: 70px 0 0 0;
+    width: 100%;
+}
+
+/******************************
+Header Styles
+******************************/
+
+
+  #logo-img {
+      height: 55px;
+      width: auto;
+      float: left;
+      margin-left: 40px;
+      margin-top: 2.5px;
+  }
+
+  #logo-text {
+      float: left;
+  }
+
+  #logo-text a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #113a52;
+    font-size: 1.2em;
+    letter-spacing: 0.179487em;
+    margin-left: 15px;
+  }
+
+
+  .header-text {
+    margin-top: 180px;
+    text-align: center;
+    color:rgb(239, 243, 244);
+    font-size: 1.1em;
+  }
+
+  #header-title {
+      padding: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.179487em;
+      font-weight: 600;
+  }
+
+  #header-headline {
+    font-weight: 300;
+
+  }
+
+
+/******************************
+Navigation Styles
+******************************/
+
+  nav {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    height: 60px;
+    padding: 15px;
+}
+
+  #main-nav {
+      float: right;
+      list-style: none;
+  }
+
+  #main-nav li {
+      display: inline-block;
+      margin-right: 30px;
+  }
+
+  #main-nav li a:link,
+  #main-nav li a:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #113a52;
+      font-size: 0.7em;
+      font-weight: 550;
+      padding: 5px;
+  }
+
+  #main-nav li a:hover,
+  #main-nav li a:active {
+    color: #e74c3c;
+    transition: color 0.2s;
+    padding: 5px;
+}
+
+
+.button-contact-us:link,
+.button-contact-us:visited {
+    margin-top: 60px;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: #eff3f4;
+    border: 1px solid #e74c3c;
+    border-radius: 15px;
+    font-weight: 300;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.button-contact-us:hover,
+.button-contact-us:active {
+    background: #eff3f4;
+    color: #e74c3c;
+    font-weight: 300;
+    border: 1px solid #e74c3c;   
+}
+
+/******************************
+Section What We Do
+******************************/
+
+#service_description {
+    height: 75vh;
+}
+
+.section-headtext {
+    text-transform: uppercase;
+    letter-spacing: 0.179487em;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.section-icons {
+    max-height: 80px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+section p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+section h4 {
+    text-align: center;
+    color: #e74c3c;
+}
+
+
+/******************************
+Service Images Styles
+******************************/
+
+.images-container {
+    list-style: none;
+    width: 100%;
+}
+
+.images-container li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.service-image {
+    width: 100%;
+    overflow: hidden;
+    background: #113a52;
+}
+
+.service-image img {
+    width:100%;
+    height: auto;
+    transform: scale(1.2);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.7;
+}
+
+.service-image img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/******************************
+Contact Us Styles
+******************************/
+
+#how-to-contact-us {
+    height: 85vh;
+}
+
+
+#phone-image {
+    width: 100%;
+}
+
+#phone-image-container {
+    margin-left: 18%;
+    margin-right: 7%;
+}
+
+.contact-step {
+    margin-top: 45px;
+}
+
+.contact-step div {
+    color: #eff3f4;
+    background: #e74c3c;
+    border: 1px solid #e74c3c;
+    border-radius: 100px;
+    width:7%;
+    height: 15%;
+    font-size: 28px;
+    text-align: center;
+    float: left;
+    margin-right: 20px;
+
+}
+
+.contact-step p {
+    font-size: 18px;
+}
+
+
+/******************************
+Feedback Section Styles
+******************************/
+
+#feedback-section {
+    background-image: linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/feedback-background.png);
+    height: 85vh;
+    background-position: center;
+    background-size: cover;
+    color: #eff3f4;
+    background-attachment: fixed;
+}
+
+blockquote {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+}
+
+cite {
+    display: block;
+}
+
+cite img {
+    width: 300px;
+    border: 2px solid #e74c3c;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
