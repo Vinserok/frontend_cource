@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru", "ua">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>MOTORLAND</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="stylesnormalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -12,9 +13,9 @@
     
     <header>
 
-        <img src="images/logo-main.png" alt="" id="logo-img">
-
-        <nav>
+        <nav> 
+            <img src="images/logo-main.png" alt="" id="logo-img">
+            
             <h5 id="logo-text"><a href="#">motorland service</a></h5>
             <ul id="main-nav">
                 <li><a href="#">О нас</a></li>
@@ -24,6 +25,7 @@
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
+
 
         <div class="header-text">
             <h1 id="header-title">MOTORLAND service</h1>
@@ -211,5 +213,88 @@
         </div>
     </section>
 
+    <section id="contact-form-section">
+        <h2 class="section-headtext">Свяжитесь с нами</h2>
+        <div id="contact-form">
+            <div class="form-row float-clearing">
+                <div class="col-6">
+                    <label for="name">Имя</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" name="name" id="name" placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="form-row float-clearing">
+                <div class="col-6">
+                    <label for="telephone">Телефон</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" name="telephone" id="telephone" placeholder="Введите телефон">
+                </div>
+            </div>
+            <div class="form-row float-clearing">
+                <div class="col-6">
+                    <label for="topic">Выберите услугу</label>
+                </div>
+                <div class="col-6">
+                    <select name="topic" id="topic">
+                        <option value="dignostic">Диагностика</option>
+                        <option value="repairs">Ремонт</option>
+                        <option value="delivery">Доставка запчастей</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row float-clearing">
+                <div class="col-6">
+                    <label for="news">Перезвонить в ближайшее время</label>
+                </div>
+                <div class="col-6">
+                    <input type="checkbox" name="checkbox" id="news"> Да, конечно
+                </div>
+            </div>
+            <div class="form-row float-clearing">
+                <div class="col-6">
+                    <label for="comment">Оставить комментарий</label>
+                </div>
+                <div class="col-6">
+                    <textarea name="comment" id="comment" placeholder="Введите комментарий"></textarea>
+                </div>
+            </div>
+            <div class="form-row float-clearing">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <a href="#" class="button-send-contact">Отправить</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer-nav">
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Доставка запчастей</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div id="social-links">
+            <ul>
+                <li><a href="https://www.facebook.com/"><img class="social-icons" id="fb" src="images/facebook-logo.svg"></img></a></li>
+                <li><a href="https://www.instagram.com/"><img class="social-icons" id="inst" src="images/instagram-logo.svg"></img></a></li>
+                <li><a href="https://www.facebook.com/"><img class="social-icons" id="you" src="images/youtube-symbol.svg"></img></a></li>
+            </ul>
+        </div>
+        <div id="text">
+            <p>Все парва защищены &copy;</p>
+            <p>Возрастные ограничения 0+</p>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.waypoints.min.js"></script>
 </body>
 </html>

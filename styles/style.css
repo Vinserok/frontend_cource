@@ -6,7 +6,8 @@ Geheral Styles
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -16,6 +17,13 @@ body {
     font-weight: 400;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .col-1 {width: 8.33%;}
@@ -33,10 +41,12 @@ body {
 
 [class*="col-"] {
     float: left;
-    padding: 3%;
+    padding: 2.5%;
   }
 
   header {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 58, 82, 0.9)), to(rgba(17, 58, 82, 0.5))), url(../images/bg.png);
+      background-image: -o-linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/bg.png);
       background-image: linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/bg.png);
       height: 85vh;
       background-position: center;
@@ -65,21 +75,43 @@ body {
     width: 100%;
 }
 
+.float-clearing {
+    zoom: 1;
+}
+
+.float-clearing:after {
+    zoom: 1;
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /******************************
 Header Styles
 ******************************/
 
 
+
   #logo-img {
-      height: 55px;
+      height: 45px;
       width: auto;
       float: left;
       margin-left: 40px;
-      margin-top: 2.5px;
+      margin-top: 7px;
+
   }
 
   #logo-text {
       float: left;
+      padding: 15px 0;
+  }
+
+  #sticky-nav {
+    padding: 0;
+    background-color: darkorange;
+ 
   }
 
   #logo-text a {
@@ -93,23 +125,50 @@ Header Styles
 
 
   .header-text {
-    margin-top: 180px;
+    padding: 0 20px;
     text-align: center;
     color:rgb(239, 243, 244);
-    font-size: 1.1em;
+
   }
 
   #header-title {
-      padding: 20px;
       text-transform: uppercase;
       letter-spacing: 0.179487em;
       font-weight: 600;
+      padding-top: 200px;
+      padding-bottom: 30px;
   }
 
   #header-headline {
     font-weight: 300;
+}
 
-  }
+.button-contact-us:link,
+.button-contact-us:visited {
+    margin-top: 60px;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: #eff3f4;
+    border: 1px solid #e74c3c;
+    border-radius: 15px;
+    font-weight: 300;
+    -webkit-transition: background-color 0.3s, border 0.3s;
+    -o-transition: background-color 0.3s, border 0.3s;
+    transition: background-color 0.3s, border 0.3s;
+    font-size: 22px;
+}
+
+.button-contact-us:hover,
+.button-contact-us:active {
+    background: #eff3f4;
+    color: #e74c3c;
+    font-weight: 300;
+    border: 1px solid #e74c3c;   
+    font-size: 22px;
+}
+
 
 
 /******************************
@@ -117,14 +176,17 @@ Navigation Styles
 ******************************/
 
   nav {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.7)));
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
     height: 60px;
-    padding: 15px;
+
 }
 
   #main-nav {
       float: right;
       list-style: none;
+      padding: 15px 0;
   }
 
   #main-nav li {
@@ -145,40 +207,16 @@ Navigation Styles
   #main-nav li a:hover,
   #main-nav li a:active {
     color: #e74c3c;
+    -webkit-transition: color 0.2s;
+    -o-transition: color 0.2s;
     transition: color 0.2s;
     padding: 5px;
-}
-
-
-.button-contact-us:link,
-.button-contact-us:visited {
-    margin-top: 60px;
-    display: inline-block;
-    padding: 10px 30px;
-    text-decoration: none;
-    background-color: #e74c3c;
-    color: #eff3f4;
-    border: 1px solid #e74c3c;
-    border-radius: 15px;
-    font-weight: 300;
-    transition: background-color 0.3s, border 0.3s;
-}
-
-.button-contact-us:hover,
-.button-contact-us:active {
-    background: #eff3f4;
-    color: #e74c3c;
-    font-weight: 300;
-    border: 1px solid #e74c3c;   
 }
 
 /******************************
 Section What We Do
 ******************************/
 
-#service_description {
-    height: 75vh;
-}
 
 .section-headtext {
     text-transform: uppercase;
@@ -232,36 +270,38 @@ Service Images Styles
 .service-image img {
     width:100%;
     height: auto;
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    -o-transition: transform 0.5s, opacity 0.5s;
     transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
     opacity: 0.7;
 }
 
 .service-image img:hover {
     opacity: 1;
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 /******************************
 Contact Us Styles
 ******************************/
 
-#how-to-contact-us {
-    height: 85vh;
-}
 
-
-#phone-image {
-    width: 100%;
-}
 
 #phone-image-container {
     margin-left: 18%;
     margin-right: 7%;
+    text-align: center;
 }
 
 .contact-step {
-    margin-top: 45px;
+    margin-top: 20px;
 }
 
 .contact-step div {
@@ -269,9 +309,9 @@ Contact Us Styles
     background: #e74c3c;
     border: 1px solid #e74c3c;
     border-radius: 100px;
-    width:7%;
-    height: 15%;
-    font-size: 28px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.8em;
     text-align: center;
     float: left;
     margin-right: 20px;
@@ -288,8 +328,9 @@ Feedback Section Styles
 ******************************/
 
 #feedback-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 58, 82, 0.9)), to(rgba(17, 58, 82, 0.5))), url(../images/feedback-background.png);
+    background-image: -o-linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/feedback-background.png);
     background-image: linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/feedback-background.png);
-    height: 85vh;
     background-position: center;
     background-size: cover;
     color: #eff3f4;
@@ -309,9 +350,155 @@ cite {
 }
 
 cite img {
-    width: 300px;
+    width: 200px;
     border: 2px solid #e74c3c;
     border-radius: 50%;
     margin-bottom: 20px;
 }
+
+
+/******************************
+Contuct Us Styles
+******************************/
+
+#contact-form {
+    font-size: 16px;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #e7a29a;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 90%;
+}
+
+textarea {
+    height: 100px;
+}
+
+.button-send-contact:link,
+.button-send-contact:visited {
+
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: #eff3f4;
+    border: 1px solid #e74c3c;
+    border-radius: 15px;
+    font-weight: 300;
+    -webkit-transition: background-color 0.3s, border 0.3s;
+    -o-transition: background-color 0.3s, border 0.3s;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+
+.button-send-contact:active,
+.button-send-contact:hover {
+    background: #eff3f4;
+    color: #e74c3c;
+    font-weight: 300;
+    border: 1px solid #e74c3c;   
+}
+
+
+/******************************
+Footer Us Styles
+******************************/
+
+footer {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 58, 82, 0.9)), to(rgba(17, 58, 82, 0.5))), url(../images/footer.png);
+    background-image: -o-linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/footer.png);
+    background-image: linear-gradient(rgba(17, 58, 82, 0.9), rgba(17, 58, 82, 0.5)), url(../images/footer.png);
+    background-position: center;
+    background-size: cover;
+    color: #eff3f4;
+    background-attachment: fixed;
+}
+
+#footer-nav {
+    margin-bottom: 20px;
+}
+
+#footer-nav li a:link,
+#footer-nav li a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #eff3f4;;
+    font-size: 0.7em;
+    font-weight: 550;
+    padding: 5px;
+}
+
+#footer-nav li a:hover,
+#footer-nav li a:active {
+    color: #e74c3c;
+    -webkit-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    transition: color 0.2s;
+    padding: 5px;
+}
+
+.social-icons {
+    width: 20px;
+
+}
+
+#social-links {
+    list-style: none;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#social-links li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#text {
+    font-size: 60%;
+}
+
+/******************************
+Media Query Styles
+******************************/
+
+@media only screen and (max-width: 1040px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  
+    section {
+        padding: 30px 0 0 0;
+    }
+
+    .section-icons {
+        max-height: 60px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+
+
+}
+
+
+
+
+
+
+
 
